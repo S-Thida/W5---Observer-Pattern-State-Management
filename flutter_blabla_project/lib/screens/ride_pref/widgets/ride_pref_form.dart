@@ -6,8 +6,9 @@ import 'package:flutter_blabla_project/widgets/display/bla_divider.dart';
 import '../../../model/ride/locations.dart';
 import '../../../model/ride_pref/ride_pref.dart';
 import 'dart:math';
-
 import '../../../widgets/actions/BlaButton.dart';
+import 'package:flutter_blabla_project/widgets/inputs/location_picker.dart';
+import 'package:flutter_blabla_project/widgets/inputs/location_tile.dart';
 
 final Random random = Random();
 
@@ -87,8 +88,7 @@ class _RidePrefFormState extends State<RidePrefForm> {
     final Location? selectedLocation = await Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => LocationSelectionScreen(
-          locations: fakeLocations,
+        builder: (context) => LocationPicker(
           onLocationSelected: (location) {
             setState(() {
               departure = location;
@@ -110,8 +110,7 @@ class _RidePrefFormState extends State<RidePrefForm> {
     final Location? selectedLocation = await Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => LocationSelectionScreen(
-          locations: fakeLocations,
+        builder: (context) => LocationPicker(
           onLocationSelected: (location) {
             setState(() {
               arrival = location;
@@ -153,6 +152,21 @@ class _RidePrefFormState extends State<RidePrefForm> {
           requestedSeats: requestedSeats);
     }
   }
+void _showLocation(BuildContext context, bool isDeparture) {
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) => LocationPicker(
+          onLocationSelected: (location) {
+            setState(
+                () => isDeparture ? departure = location : arrival = location);
+            Navigator.pop(context);
+          },
+        ),
+      ),
+    );
+  
+}
 
   // ----------------------------------
   // Build the widgets
@@ -234,34 +248,4 @@ class InputTile extends StatelessWidget {
   }
 }
 
-// Location Selection Screen
-class LocationSelectionScreen extends StatelessWidget {
-  final List<Location> locations;
-  final ValueChanged<Location> onLocationSelected;
 
-  const LocationSelectionScreen({
-    super.key,
-    required this.locations,
-    required this.onLocationSelected,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Select Location")),
-      body: ListView.builder(
-        itemCount: locations.length,
-        itemBuilder: (context, index) {
-          final location = locations[index];
-          return ListTile(
-            title: Text(location.name),
-            onTap: () {
-              onLocationSelected(location);
-              Navigator.pop(context);
-            },
-          );
-        },
-      ),
-    );
-  }
-}

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/ride_pref/ride_pref_screen.dart';
 import 'theme/theme.dart';
+import 'widgets/inputs/location_picker.dart';
 
 void main() {
   runApp(const MyApp());
