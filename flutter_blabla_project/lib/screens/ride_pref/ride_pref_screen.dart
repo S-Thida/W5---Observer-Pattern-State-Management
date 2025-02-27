@@ -60,7 +60,7 @@ class _RidePrefScreenState extends State<RidePrefScreen> {
 
 
                   // 2.1 Display the Form to input the ride preferences
-                  RidePrefForm(initRidePref: RidePrefService.currentRidePref,),
+                  RidePrefForm(initRidePref: RidePrefService.currentRidePref, ),
                   SizedBox(height: BlaSpacings.m),
 
 
