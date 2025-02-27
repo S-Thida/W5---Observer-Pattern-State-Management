@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blabla_project/screens/rides/ride_screen.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_blabla_project/dummy_data/dummy_data.dart';
 import 'package:flutter_blabla_project/theme/theme.dart';
@@ -92,6 +93,7 @@ class _RidePrefFormState extends State<RidePrefForm> {
           onLocationSelected: (location) {
             setState(() {
               departure = location;
+              Navigator.pop(context);
             });
           },
         ),
@@ -114,6 +116,7 @@ class _RidePrefFormState extends State<RidePrefForm> {
           onLocationSelected: (location) {
             setState(() {
               arrival = location;
+              Navigator.pop(context);
             });
           },
         ),
@@ -139,18 +142,32 @@ class _RidePrefFormState extends State<RidePrefForm> {
   //submit
   void submit() {
     // 1- Check input validity
-    bool departured = departure != null;
-    bool arrived = arrival != null;
-    bool isValid = departured && arrived;
+     if (departure == null || arrival == null) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                        backgroundColor: BlaColors.neutral,
+                        content: Text(
+                          "Please select both locations",
+                          style: BlaTextStyles.label,
+                        )),
+                  );
+                  return;
+                }
 
-    if (isValid) {
-      // 2 - Create a  new preference
-      RidePref newPreference = RidePref(
-          departure: departure!,
-          departureDate: departureDate,
-          arrival: arrival!,
-          requestedSeats: requestedSeats);
-    }
+                final currentPref = RidePref(
+                  departure: departure!,
+                  arrival: arrival!,
+                  departureDate: departureDate,
+                  requestedSeats: requestedSeats,
+                );
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        RidesScreen(selectedPref: currentPref),
+                  ),
+                );
   }
 void _showLocation(BuildContext context, bool isDeparture) {
     Navigator.push(
@@ -206,6 +223,7 @@ void _showLocation(BuildContext context, bool isDeparture) {
           onTap: () {},
         ),
         BlaButton(text: "Search", onPressedbutton: submit),
+        
       ],
     );
   }
