@@ -16,7 +16,7 @@ class RidesService {
   ///  Return the relevant rides, given the passenger preferences
   ///
   static List<Ride> getRidesFor(RidePref preferences) {
-    //  print(availableRides);
+     print(availableRides);
     
     // For now, just a test
     return availableRides.where( (ride) => ride.departureLocation == preferences.departure && ride.arrivalLocation == preferences.arrival).toList();
