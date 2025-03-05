@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blabla_project/repository/mock/mock_ride_preferences_repository.dart';
 import 'screens/ride_pref/ride_pref_screen.dart';
+import 'service/ride_prefs_service.dart';
 import 'theme/theme.dart';
-import 'widgets/inputs/location_picker.dart';
-import 'package:flutter_blabla_project/utils/animations_util.dart';
 
 void main() {
+
+  // 1 - Initialize the services
+  RidePrefService.initialize(MockRidePreferencesRepository());
+
+  // 2- Run the UI
   runApp(const MyApp());
 }
 

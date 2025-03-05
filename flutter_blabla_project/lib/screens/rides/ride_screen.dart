@@ -8,7 +8,7 @@ import 'package:flutter_blabla_project/theme/theme.dart';
 import 'package:flutter_blabla_project/utils/date_time_util.dart';
 
 class RidesScreen extends StatelessWidget {
-  final RidePref selectedPref;
+  final RidePreference selectedPref;
   const RidesScreen({super.key, required this.selectedPref});
 
   //

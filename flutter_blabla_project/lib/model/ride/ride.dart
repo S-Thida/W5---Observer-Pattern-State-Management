@@ -1,4 +1,4 @@
-import '../../model/ride/locations.dart';
+import 'package:flutter_blabla_project/model/ride/locations.dart';
 
 import '../../utils/date_time_util.dart';
 import '../user/user.dart';

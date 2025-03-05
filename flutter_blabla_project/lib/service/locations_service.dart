@@ -1,4 +1,5 @@
-import '../../model/ride/locations.dart';
+import 'package:flutter_blabla_project/model/ride/locations.dart';
+
 import '../dummy_data/dummy_data.dart';
 
 ////
@@ -7,6 +8,6 @@ import '../dummy_data/dummy_data.dart';
 ///
 class LocationsService {
 
-  static const List<Location> availableLocations = fakeLocations;   // TODO for now fake data
+  static const List<Location> availableLocations = fakeLocations; 
  
 }
