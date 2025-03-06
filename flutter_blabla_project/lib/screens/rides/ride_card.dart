@@ -25,6 +25,7 @@ class RideCard extends StatelessWidget {
             Text(
                 "Time: ${DateTimeUtils.formatTime(ride.departureDate)} => ${DateTimeUtils.formatTime(ride.arrivalDateTime)}",
                 style: BlaTextStyles.body),
+                
           ],
         ),
       ),
