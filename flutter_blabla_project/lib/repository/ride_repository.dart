@@ -5,5 +5,5 @@ import '/model/ride/locations.dart';
 
 abstract class RideRepository {
 
-  List<Ride> getRides(RidePreference preferences, RidesFilter? filter);
+  List<Ride> getRides(RidePreference preferences, RidesFilter? filter,);
 }

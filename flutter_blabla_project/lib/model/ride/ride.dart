@@ -24,7 +24,7 @@ class Ride {
   final User driver;
 
   final int availableSeats;
-  final double? pricePerSeat;
+  final double pricePerSeat;
   final bool acceptPets;
 
   RideStatus status = RideStatus.created;

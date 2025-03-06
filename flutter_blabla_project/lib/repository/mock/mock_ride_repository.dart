@@ -25,7 +25,7 @@ class MockRidesRepository extends RideRepository {
         verifiedProfile: true,
       ),
       availableSeats: 2,
-      pricePerSeat: null,
+      pricePerSeat: 8,
       acceptPets: false,
     ),
     Ride(
@@ -43,7 +43,7 @@ class MockRidesRepository extends RideRepository {
         verifiedProfile: true,
       ),
       availableSeats: 0,
-      pricePerSeat: null,
+      pricePerSeat: 10,
       acceptPets: false,
     ),
     Ride(
@@ -61,7 +61,7 @@ class MockRidesRepository extends RideRepository {
         verifiedProfile: true,
       ),
       availableSeats: 1,
-      pricePerSeat: null,
+      pricePerSeat: 12,
       acceptPets: false,
     ),
     Ride(
@@ -79,7 +79,7 @@ class MockRidesRepository extends RideRepository {
         verifiedProfile: true,
       ),
       availableSeats: 2,
-      pricePerSeat: null,
+      pricePerSeat: 14,
       acceptPets: true,
     ),
     Ride(
@@ -97,18 +97,22 @@ class MockRidesRepository extends RideRepository {
         verifiedProfile: true,
       ),
       availableSeats: 1,
-      pricePerSeat: null,
+      pricePerSeat: 16,
       acceptPets: false,
     ),
   ];
+  
+  
+
 
   @override
-  List<Ride> getRides(RidePreference preference, RidesFilter? filter) {
-    return rides.where((ride) {
-      if (filter != null && filter.acceptPets && !ride.acceptPets) {
-        return false;
-      }
-      return true;
-    }).toList();
-  }
+List<Ride> getRides(RidePreference preference, RidesFilter? filter) {
+  // Filtering rides based on the provided filter
+  return rides.where((ride) {
+    if (filter != null && filter.acceptPets && !ride.acceptPets) {
+      return false;
+    }
+    return true;
+  }).toList();
+}
 }

@@ -25,7 +25,7 @@ class _RidesScreenState extends State<RidesScreen> {
  
   RidePreference currentPreference = RidePrefService.instance.currentPreference!;
   RidesFilter? filter; 
-  
+
   // TODO 1 : We should get it from the service
 
   List<Ride> get matchingRides => RidesService.instance.getRides(currentPreference, filter);
