@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blabla_project/theme/theme.dart';
+import '../../theme/theme.dart';
 
 enum BlaButtonType { primary, secondary }
 

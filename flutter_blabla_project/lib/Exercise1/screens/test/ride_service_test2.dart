@@ -1,8 +1,8 @@
-import 'package:flutter_blabla_project/model/ride/locations.dart';
-import 'package:flutter_blabla_project/model/ride_pref/ride_pref.dart';
-import 'package:flutter_blabla_project/service/rides_service.dart';
-import 'package:flutter_blabla_project/utils/date_time_util.dart';
-import 'package:flutter_blabla_project/repository/mock/mock_ride_repository.dart';
+import '../../model/ride/locations.dart';
+import '../../model/ride_pref/ride_pref.dart';
+import '../../service/rides_service.dart';
+import '../../utils/date_time_util.dart';
+import '../../repository/mock/mock_ride_repository.dart';
 
 
 void main() {

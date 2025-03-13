@@ -1,4 +1,6 @@
-import 'package:flutter_blabla_project/repository/mock/mock_ride_preferences_repository.dart';
+import 'package:flutter_blabla_project/Exercise1/listener/ride_preference_listener.dart';
+
+import '../repository/mock/mock_ride_preferences_repository.dart';
 
 import '../model/ride_pref/ride_pref.dart';
 import '../repository/ride_preferences_repository.dart';
@@ -32,6 +34,7 @@ class RidePrefService {
     } else {
       throw Exception("RidePreferencesService is already initialized.");
     }
+
   }
 
   ///
@@ -42,6 +45,19 @@ class RidePrefService {
 		  throw Exception("RidePreferencesService is not initialized. Call initialize() first.");
 		}
 		return _instance!;
+  }
+// Exercise1- Manage a list of listeners
+final List<RidePreferencesListener> _listeners = [];
+
+  void addListener(RidePreferencesListener listener) {
+    _listeners.add(listener);
+  }
+
+
+  void notifyListeners(RidePreference selectedPreference) {
+    for (var listener in _listeners) {
+      listener.onPreferenceSelected(selectedPreference);
+    }
   }
 
   // Current preference

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blabla_project/screens/rides/widgets/ride_pref_bar.dart';
-import 'package:flutter_blabla_project/screens/rides/widgets/ride_pref_modal.dart';
-import 'package:flutter_blabla_project/service/ride_prefs_service.dart';
-import 'package:flutter_blabla_project/utils/animations_util.dart';
+import '../../screens/rides/widgets/ride_pref_bar.dart';
+import '../../screens/rides/widgets/ride_pref_modal.dart';
+import '../../service/ride_prefs_service.dart';
+import '../../utils/animations_util.dart';
  
 import '../../dummy_data/dummy_data.dart';
 import '../../model/ride/ride.dart';

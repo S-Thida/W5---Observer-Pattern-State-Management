@@ -1,5 +1,5 @@
-import 'package:flutter_blabla_project/model/ride/locations.dart';
-import 'package:flutter_blabla_project/repository/locations_repository.dart';
+import '../model/ride/locations.dart';
+import '../repository/locations_repository.dart';
 
 import '../dummy_data/dummy_data.dart';
 

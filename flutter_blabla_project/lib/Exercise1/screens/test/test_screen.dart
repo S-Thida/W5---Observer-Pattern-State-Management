@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blabla_project/widgets/actions/blabutton.dart';
+import '../../widgets/actions/blabutton.dart';
 
 class BlaButtonTestScreen extends StatelessWidget {
   const BlaButtonTestScreen({super.key});

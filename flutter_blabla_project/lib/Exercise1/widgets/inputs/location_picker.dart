@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blabla_project/model/ride/locations.dart';
-import 'package:flutter_blabla_project/dummy_data/dummy_data.dart';
+import '../../model/ride/locations.dart';
+import '../../dummy_data/dummy_data.dart';
 
-import 'package:flutter_blabla_project/widgets/display/bla_divider.dart';
-import 'package:flutter_blabla_project/widgets/inputs/location_tile.dart';
+import '../../widgets/display/bla_divider.dart';
+import '../../widgets/inputs/location_tile.dart';
 
 //
 // Location Picker Screen

@@ -1,11 +1,11 @@
-import 'package:flutter_blabla_project/model/ride/ride.dart';
-import 'package:flutter_blabla_project/model/ride_pref/ride_pref.dart';
-import 'package:flutter_blabla_project/repository/ride_repository.dart';
-import 'package:flutter_blabla_project/service/rides_service.dart';
+import '../../model/ride/ride.dart';
+import '../../model/ride_pref/ride_pref.dart';
+import '../../repository/ride_repository.dart';
+import '../../service/rides_service.dart';
 
 
-import '/model/ride/locations.dart';
-import '/model/user/user.dart';
+import '../../model/ride/locations.dart';
+import '../../model/user/user.dart';
 
 
 class MockRidesRepository extends RideRepository {

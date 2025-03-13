@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blabla_project/dummy_data/dummy_data.dart';
-import 'package:flutter_blabla_project/model/ride/locations.dart';
-import 'package:flutter_blabla_project/model/ride/ride.dart';
-import 'package:flutter_blabla_project/model/ride_pref/ride_pref.dart';
-import 'package:flutter_blabla_project/screens/rides/ride_card.dart';
-import 'package:flutter_blabla_project/theme/theme.dart';
-import 'package:flutter_blabla_project/utils/date_time_util.dart';
+import '../../dummy_data/dummy_data.dart';
+import '../../model/ride/locations.dart';
+import '../../model/ride/ride.dart';
+import '../../model/ride_pref/ride_pref.dart';
+import '../../screens/rides/ride_card.dart';
+import '../../theme/theme.dart';
+import '../../utils/date_time_util.dart';
 
 class RidesScreen extends StatelessWidget {
   final RidePreference selectedPref;

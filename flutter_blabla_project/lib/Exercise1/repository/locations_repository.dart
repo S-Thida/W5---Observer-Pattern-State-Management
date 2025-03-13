@@ -1,4 +1,4 @@
-import '/model/ride/locations.dart';
+import '../model/ride/locations.dart';
 
 abstract class LocationsRepository {
 

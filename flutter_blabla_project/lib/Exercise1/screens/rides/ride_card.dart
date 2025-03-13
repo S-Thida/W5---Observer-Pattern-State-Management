@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blabla_project/model/ride/ride.dart';
-import 'package:flutter_blabla_project/theme/theme.dart';
-import 'package:flutter_blabla_project/utils/date_time_util.dart';
+import '../../model/ride/ride.dart';
+import '../../theme/theme.dart';
+import '../../utils/date_time_util.dart';
 
 class RideCard extends StatelessWidget {
   final Ride ride;

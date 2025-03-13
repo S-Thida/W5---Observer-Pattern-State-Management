@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blabla_project/model/ride/locations.dart';
-import 'package:flutter_blabla_project/theme/theme.dart';
+import '../../model/ride/locations.dart';
+import '../../theme/theme.dart';
 
 //
 // Location Tile for supporting the displaying of the Location

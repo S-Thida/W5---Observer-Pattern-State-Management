@@ -1,5 +1,5 @@
-import '/model/ride/locations.dart';
-import '/repository/locations_repository.dart';
+import '../../model/ride/locations.dart';
+import '../../repository/locations_repository.dart';
 
 class MockLocationsRepository extends LocationsRepository {
   final Location phnompenh=Location(name: "Phnom Penh", country: Country.cambodia);
